@@ -1,0 +1,32 @@
+.slick-prev,
+.slick-next {
+	width: 40px;
+	height: 41px;
+	font-size: 12px;
+    font-weight: bold;
+	border: 0;
+	border-radius: 0;
+	z-index: 2;
+	top: auto;
+	bottom: -20px;
+	@media all and (max-width: 600px) {
+		width: 35px;
+		height: 35px;
+	}
+}
+
+.slick-dots li button:before {
+	display: none;
+}
+.slick-dots li,
+.slick-dots li button {
+	width: 5px;
+	height: 5px;
+	padding: 0;
+	background: #C4C4C4;
+	border-radius: 100%;
+	border: 0;
+}
+.slick-dots li.slick-active button{
+	background: var(--color-accent);
+}

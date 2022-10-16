@@ -1,0 +1,111 @@
+@media all and (max-width: 767px) {
+	.header-login {
+		display: none;
+	}
+
+	.header-menu {
+		text-align: right;
+	}
+
+	.menu-toggle svg {
+		fill: #fff;
+	}
+
+	.nav li.current-menu-item a {
+		background: transparent;
+	}
+
+	.nav li:hover {
+		background: transparent;
+	}
+
+	.nav .sub-menu {
+		margin: 0;
+	}
+
+	.nav .sub-menu li {
+		padding: 0 15px;
+	}
+
+	.section-link {
+		&__item {
+			width: 48%;
+		}
+	}
+
+	.why-chose {
+		&__num {
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	.about-dealer {
+
+		&__image,
+		&__content {
+			width: 100%;
+		}
+
+		&__item {
+			&--content {
+				width: 100%;
+				order: 2;
+			}
+
+			&--image {
+				width: 100%;
+			}
+		}
+	}
+
+	.huong-dan {
+		&__item {
+			&--content {
+				width: 100%;
+				order: 2;
+			}
+
+			&--image {
+				width: 100%;
+			}
+		}
+	}
+
+	.vuot-troi {
+		&__item {
+			padding: 15px;
+		}
+
+		&__image {
+			width: 100%;
+			text-align: center;
+
+			img {
+				width: 60px;
+			}
+		}
+
+		&__content {
+			width: 100%;
+		}
+	}
+
+	.home-news {
+		&__wrap {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	.site-footer {
+		&__item {
+			width: 100%;
+		}
+	}
+
+	.archive_post,
+	.new_Post {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

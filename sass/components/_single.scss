@@ -1,0 +1,176 @@
+.post-single {
+	position: relative;
+
+	&__wrap {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	&__post {
+		position: relative;
+		overflow: hidden;
+		width: calc(100% - 300px - 20px);
+		color: #fff;
+
+		h1.title {
+			color: #e9952b;
+			font-size: 28px;
+			margin: 0 0 20px;
+		}
+
+		.entry-content {
+			font-size: 17px;
+			color: #fff;
+		}
+
+		img {
+			margin: 0 auto;
+			display: table;
+		}
+
+		figure {
+			width: 100% !important;
+		}
+	}
+
+	&__sidebar {
+		width: 300px;
+		position: relative;
+	}
+}
+
+.aligncenter {
+	margin: auto;
+}
+
+.tags {
+	color: #e9952b;
+	font-size: 16px;
+	font-weight: 700;
+
+	a {
+		color: mediumvioletred;
+		text-decoration: underline;
+		padding: 5px;
+	}
+}
+
+#breadcrumbs {
+	a {
+		color: rgba(255, 255, 255, 0.8);
+
+		&:hover {
+			color: #4246cd;
+		}
+	}
+}
+
+.new_Post {
+	article {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		color: rgba($color: #fff, $alpha: 0.8);
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px dashed #ddd;
+		gap: 20px;
+	}
+
+	.entry-thumbnail {
+		width: 250px;
+		position: relative;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.entry-content {
+		width: calc(100% - 250px - 20px);
+
+		a {
+			text-decoration: none;
+		}
+
+		h2 {
+			font-size: 18px;
+			font-weight: 600;
+			margin-top: 0;
+			margin-bottom: 20px;
+			color: #fff;
+		}
+	}
+
+	.entry_excerpt {
+		position: relative;
+		@include set-line(2);
+		text-align: justify;
+		margin-bottom: 20px;
+	}
+
+	a.see-more {
+		display: inline-block;
+		color: #da251c;
+		font-size: 14px;
+		text-decoration: underline;
+	}
+}
+
+.site-page {
+	h1 {
+		color: #e9952b;
+		font-size: 28px;
+		margin: 0 0 20px;
+	}
+
+	.entry-content {
+		font-size: 17px;
+		color: #fff;
+
+		img {
+			margin: auto;
+			display: table;
+		}
+	}
+}
+
+#toc_container {
+	.toc_title {
+		color: #1e73be;
+		text-align: center;
+		font-weight: 700;
+		margin: 0;
+		padding: 0;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			color: #000;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.post-single {
+
+		&__post,
+		&__sidebar {
+			width: 100%
+		}
+	}
+
+	.new_Post {
+
+		.entry-thumbnail,
+		.entry-content {
+			width: 100%;
+		}
+	}
+}

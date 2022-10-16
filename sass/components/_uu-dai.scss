@@ -1,0 +1,61 @@
+.uu-dai {
+	position: relative;
+	padding: 50px 0;
+
+	h2.title {
+		font-weight: 700;
+		font-size: 32px;
+		color: #0E1618;
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0 0 42px;
+	}
+
+	&__wrap {
+		position: relative;
+		display: grid;
+		gap: 24px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	&__item {
+		position: relative;
+		background: #DBE6E2;
+		padding: 30px 24px;
+
+		.entry-top {
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 16px;
+
+			h3 {
+				display: inline-block;
+				font-size: 24px;
+				color: #0E1618;
+
+			}
+		}
+
+		.entry-content {
+			color: #6A7172;
+			font-weight: 400;
+			font-size: 14px;
+
+			p {
+				margin-bottom: 26px;
+			}
+		}
+
+		a.see-more {
+			background: #FFFFFF;
+			border-radius: 8px;
+			padding: 10px 32px;
+			font-weight: 500;
+			font-size: 14px;
+			color: #0E1618;
+			text-transform: uppercase;
+		}
+	}
+}

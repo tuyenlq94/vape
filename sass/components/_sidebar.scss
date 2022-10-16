@@ -1,0 +1,85 @@
+.widget_categories,
+.widget_tag_cloud,
+.widget_iwin-recent-posts,
+.widget {
+	position: relative;
+	background-color: #320050;
+	border-radius: 5px;
+	margin-bottom: 20px;
+
+	.widget-title {
+		width: 100%;
+		display: flex;
+		background-color: #2894ca;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 14px;
+		margin-bottom: auto;
+		display: block;
+		margin: 0 0 10px 0;
+
+		span {
+			background: #e9952c;
+			padding: 10px 20px 8px 20px;
+			color: white;
+			position: relative;
+			display: inline-block;
+			margin: 0;
+			margin: 0;
+			font-size: 16px;
+			line-height: 22px;
+			display: inline-block;
+			text-transform: uppercase;
+
+			&:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border-top: 40px solid transparent;
+				border-left: 20px solid #e9952c;
+				border-bottom: 0px solid transparent;
+				border-right: 0 solid transparent;
+				position: absolute;
+				top: 0px;
+				right: -20px;
+			}
+		}
+	}
+
+	.tagcloud {
+		padding: 0;
+		margin: 0 15px;
+	}
+
+	div {
+		padding: 10px 15px;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0 15px;
+
+		&.children {
+			display: none;
+		}
+	}
+
+	li {
+		list-style: disc;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+
+	a {
+		color: #fef1d0;
+		display: inline-block;
+		padding: 6px 0;
+		text-decoration: none;
+
+		&:hover {
+			color: #4246cd;
+		}
+	}
+}

@@ -1,0 +1,125 @@
+.pagination {
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	.nav-links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: max-content;
+		margin: 0 auto;
+
+	}
+}
+
+.page-numbers {
+	//background: var(--color-base);
+	color: var(--color-grey);
+	border-radius: 2px;
+	margin-right: 5px;
+	border: none;
+	width: 36px;
+	height: 36px;
+	@include absolute-center();
+	font-size: 18px;
+	background-color: #ccc;
+	border-radius: 100%;
+
+	&:hover,
+	&.current {
+		text-decoration: none;
+		color: #fff;
+		font-weight: 700;
+		background-color: #446084;
+	}
+}
+
+.next,
+.prev {
+	background-color: var(--hover);
+	color: #fff;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&:hover {
+		color: var(--hover);
+		background-color: #F1EBDE;
+	}
+}
+
+// .next {
+// 	background-image: url('images/next-pagination.png');
+// }
+
+// .prev {
+// 	background-image: url('images/prev-pagination.png');
+// }
+
+.archive-description {
+	color: var(--color-grey);
+}
+
+.nav-pagination,
+.nav-page {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 20px 0;
+	align-items: center;
+
+	ul.pagination {
+		margin: 5px 10px;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	li {
+		color: #7C7C7C;
+		border-radius: 2px;
+		margin-right: 5px;
+		border: none;
+		width: 36px;
+		height: 36px;
+		list-style: none;
+		font-size: var(--text-sm);
+		border-bottom: 1px solid #7C7C7C;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+
+		&:hover,
+		&.active {
+			border-bottom: 1px solid var(--color-accent);
+
+			a {
+				text-decoration: none;
+				color: var(--color-accent);
+				font-weight: 700;
+			}
+		}
+	}
+
+	a {
+		color: #7C7C7C;
+		font-size: 18px;
+
+		&::before {
+			content: '0';
+		}
+	}
+
+	.btn-prev {
+		width: 10px;
+		height: 10px;
+		background: url('images/prev-pagination.png') no-repeat;
+	}
+
+	.btn-next {
+		width: 10px;
+		height: 10px;
+		background: url('images/next-pagination.png') no-repeat;
+	}
+}

@@ -1,0 +1,29 @@
+/*!
+Theme Name: vape
+Theme URI: http://underscores.me/
+Author: titanweb.vn
+Author URI: https://titanweb.vn/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: vape
+*/
+@import "variables";
+@import "mixins";
+
+@import "base/core";
+@import "base/bootstrap-grid";
+@import "base/slick";
+
+@import "components/header";
+@import "components/menu";
+@import "components/home/banner";
+@import "components/home/transportation";
+@import "components/home/portfolio";
+@import "components/home/products";
+@import "components/home/link-page";
+@import "components/uu-dai";
+@import "components/news";

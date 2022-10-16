@@ -1,0 +1,113 @@
+.header {
+	position: relative;
+
+	&-top {
+		background-color: #161616;
+	}
+
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		position: relative;
+		padding: 5px 0;
+	}
+
+	&-right {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 83px;
+	}
+
+	&-phone,
+	&-time {
+
+		p {
+			color: #969696;
+			margin: 0 0 8px;
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: 500;
+			line-height: 1.2;
+
+			&.phone,
+			&.time {
+				color: var(--color-white);
+				font-size: 15px;
+			}
+		}
+	}
+
+	&-cart {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 5px;
+
+		svg {
+			fill: var(--color-white);
+		}
+	}
+
+	&-search {
+		display: none;
+		position: absolute;
+		top: 50px;
+		left: 0;
+		background-color: var(--color-white);
+		border-radius: 5px;
+		box-shadow: 0px 2px 7px 0px #ccc;
+
+		.search-form {
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+
+			label {
+				margin: 0;
+			}
+
+			input {
+				padding: 12px;
+			}
+		}
+
+		.search-submit {
+			background-color: #161616;
+			color: var(--color-white);
+		}
+	}
+
+	.account__wrapper {
+		display: none;
+		position: absolute;
+		top: 50px;
+		left: 0;
+		background-color: var(--color-white);
+		padding: 5px 15px;
+		border-radius: 5px;
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			list-style: none;
+			margin-bottom: 10px;
+		}
+	}
+
+	&-menu {
+		position: relative;
+		background-color: #61795D;
+	}
+}

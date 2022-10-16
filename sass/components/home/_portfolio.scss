@@ -1,0 +1,156 @@
+.product-portfolio {
+	position: relative;
+	background-color: #DBE6E2;
+	padding: 16px 0;
+
+	ul.tabs {
+		padding: 0;
+		margin: 0 0 30px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 50px;
+		border-bottom: 1px solid #fff;
+
+		li {
+			list-style: none;
+			color: #969696;
+			font-size: 28px;
+
+			&.current {
+				font-weight: 600;
+				color: #0E1618;
+				border-bottom: 4px solid #367E62;
+			}
+		}
+	}
+
+	.tab-content {
+		display: none;
+
+		&.current {
+			display: block;
+		}
+	}
+
+	&__inner {
+		position: relative;
+
+		.slick-slide {
+			padding: 0 8px;
+		}
+
+		.slick-dots {
+
+			li {
+				width: 12px;
+				height: 12px;
+				background: rgba(255, 255, 255, 0.45);
+
+				button {
+					width: 12px;
+					height: 12px;
+					background: rgba(255, 255, 255, 0.45);
+				}
+
+				&.slick-active {
+					background: transparent;
+					width: 20px;
+					height: 20px;
+
+					button {
+						width: 20px;
+						height: 20px;
+						border: 1px solid rgba(218, 176, 41, 1);
+						background: transparent;
+					}
+				}
+			}
+		}
+	}
+
+	&__item {
+		position: relative;
+		background-color: #fff;
+		display: flex !important;
+		flex-wrap: wrap;
+		align-items: center;
+		padding: 20px;
+		margin-bottom: 16px;
+		gap: 24px;
+	}
+
+	&__image {
+		width: 60px;
+		height: 60px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__content {
+		width: calc(100% - 60px - 24px);
+
+		h3 {
+			font-weight: 600;
+			font-size: 18px;
+			margin: 0;
+			color: #0E1618;
+			text-transform: uppercase;
+			min-height: 45px;
+			@include set-line(2);
+			display: flex;
+			align-items: center;
+		}
+
+		p {
+			font-weight: 500;
+			font-size: 16px;
+			color: #969696;
+			margin: 0;
+		}
+	}
+
+	&__trademark {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 40px 80px;
+		padding-bottom: 50px;
+	}
+}
+
+.trademark__item {
+	width: calc(20% - 80px);
+	position: relative;
+}
+
+.trademark__image {
+	border-radius: 16px;
+
+	img {
+		border-radius: 16px;
+	}
+}
+
+.trademark__content {
+	text-align: center;
+
+	h3 {
+		font-weight: 600;
+		font-size: 22px;
+		color: #0E1618;
+		margin: 16px 0 0;
+	}
+
+	p {
+		font-weight: 400;
+		font-size: 18px;
+		color: #969696;
+		margin: 0;
+	}
+}

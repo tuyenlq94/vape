@@ -1,52 +1,49 @@
 .site-footer {
 	position: relative;
-	padding: 50px 0;
+	padding: 50px 0 0;
 	overflow: hidden;
+	background: #1C4A3E;
+	background-image: url('images/bg_footer-min.png');
 
-	&__top {
+	&__wrap {
 		position: relative;
-		overflow: hidden;
+		display: flex;
+		flex-wrap: wrap;
+		border-bottom: 1px solid #fff;
+		padding-bottom: 30px;
+	}
 
-		h3 {
-			font-size: 14px;
-			color: #e9952b;
-			text-transform: uppercase;
-			text-align: center;
-			margin: 0 0 20px;
-		}
+	.footer_about {
+		position: relative;
+		flex: 0 0 40%;
+		padding-right: 77px;
+		color: #fff;
+		font-weight: 500;
+		font-size: 16px;
 
 		ul {
-			margin: 0;
 			padding: 0;
+			margin: 0;
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-between;
-			margin: auto;
-			width: fit-content;
-			gap: 24px;
-		}
+			align-items: center;
+			gap: 20px;
 
-		a {
-			-webkit-animation-name: buzz-out-on-hover;
-			animation-name: buzz-out-on-hover;
-			-webkit-animation-duration: .75s;
-			animation-duration: .75s;
-			-webkit-animation-timing-function: linear;
-			animation-timing-function: linear;
-			-webkit-animation-iteration-count: 1;
-			animation-iteration-count: 1;
-			opacity: .9;
+			li {
+				list-style: none;
+			}
 		}
 	}
 
-	&__bottom {
+	.footer_menu {
 		position: relative;
-		color: #fff;
-		padding-top: 50px;
+		flex: 0 0 20%;
 
 		h3 {
-			margin: 0 0 15px;
-
+			font-weight: 600;
+			font-size: 20px;
+			color: #FFFFFF;
+			text-transform: uppercase;
 		}
 
 		ul {
@@ -55,42 +52,40 @@
 
 			li {
 				list-style: none;
+				font-weight: 400;
+				font-size: 14px;
+				color: #FFFFFF;
+				text-transform: capitalize;
+				line-height: 256%;
+				display: flex;
+				align-items: center;
+
+				img {
+					margin-right: 10px;
+				}
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		&:last-child {
+			ul li {
+				line-height: 24px;
 				margin-bottom: 10px;
 			}
 		}
-
-		iframe {
-			height: 250px;
-		}
 	}
 
-	&__pay {
-		ul {
-			margin: 0;
-			padding: 0;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			align-items: center;
-		}
-
-		li {
-			list-style: none;
-
-			img {
-				height: 35px;
-				width: auto;
-			}
-		}
-	}
-}
-
-@media only screen and (max-width: 767px) {
-	.site-footer {
-		&__top {
-			ul {
-				justify-content: center;
-			}
+	&__inner {
+		p {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 160%;
+			text-align: center;
+			color: #fff;
 		}
 	}
 }

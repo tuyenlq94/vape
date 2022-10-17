@@ -19,6 +19,9 @@ $about = rwmb_meta( 'footer_about', [ 'object_type' => 'setting' ], 'footer' );
 				<div class="footer_menu"><?php dynamic_sidebar( 'footer_support' )?></div>
 				<div class="footer_menu"><?php dynamic_sidebar( 'footer_contact' )?></div>
 			</div>
+			<div class="site-footer__inner">
+				<p>Copyright © 2022 VAPEHANGHIEU.COM</p>
+			</div>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

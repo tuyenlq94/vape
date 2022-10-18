@@ -79,6 +79,25 @@ jQuery( function ( $ ) {
 				},
 			]
 		} );
+		$( '.thuong-hieu__wrap, .thuong-hieu__inner' ).slick( {
+			rows: 2,
+			dots: true,
+			arrows: false,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 5,
+			slidesToScroll: 5,
+			responsive: [
+				{
+					breakpoint: 600,
+					autoplay: true,
+					autoplaySpeed: 5000,
+					settings: {
+						slidesToShow: 1,
+					}
+				},
+			]
+		} );
 
 	};
 	function tab() {

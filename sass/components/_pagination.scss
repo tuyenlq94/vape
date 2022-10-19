@@ -13,8 +13,7 @@
 }
 
 .page-numbers {
-	//background: var(--color-base);
-	color: var(--color-grey);
+	color: #61795D;
 	border-radius: 2px;
 	margin-right: 5px;
 	border: none;
@@ -23,22 +22,20 @@
 	@include absolute-center();
 	font-size: 18px;
 	background-color: #ccc;
-	border-radius: 100%;
 
 	&:hover,
 	&.current {
 		text-decoration: none;
 		color: #fff;
 		font-weight: 700;
-		background-color: #446084;
+		background-color: #61795D;
 	}
 }
 
 .next,
 .prev {
-	background-color: var(--hover);
-	color: #fff;
-	border-radius: 100%;
+	background-color: #EEEEEE;
+	color: #61795D;
 	background-repeat: no-repeat;
 	background-position: center;
 

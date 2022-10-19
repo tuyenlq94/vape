@@ -1,95 +1,95 @@
-.archive {
+.archive-post {
 	position: relative;
 
 	&__wrap {
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 20px;
-	}
-
-	&__posts {
-		position: relative;
-		width: calc(100% - 300px - 20px);
-
-		article {
-			position: relative;
-			display: flex;
-			flex-wrap: wrap;
-			color: rgba($color: #fff, $alpha: 0.8);
-			padding-bottom: 20px;
-			margin-bottom: 20px;
-			border-bottom: 1px dashed #ddd;
-			gap: 20px;
-		}
-
-		.entry-thumbnail {
-			width: 250px;
-			position: relative;
-
-			img {
-				width: 100%;
-				object-fit: cover;
-			}
-		}
-
-		.entry-content {
-			width: calc(100% - 250px - 20px);
-
-			a {
-				text-decoration: none;
-			}
-
-			h2 {
-				font-size: 18px;
-				font-weight: 600;
-				margin-top: 0;
-				margin-bottom: 20px;
-				color: #fff;
-			}
-		}
-
-		.entry_excerpt {
-			position: relative;
-			@include set-line(2);
-			text-align: justify;
-			margin-bottom: 20px;
-		}
-
-		a.see-more {
-			display: inline-block;
-			color: #da251c;
-			font-size: 14px;
-			text-decoration: underline;
-		}
+		gap: 30px;
+		margin-top: 30px;
 	}
 
 	&__sidebar {
-		width: 300px;
 		position: relative;
+		flex: 0 0 calc(25% - 15px);
 	}
 
-	h1.page-title {
-		color: #e9952b;
-		margin-top: 0;
-		margin-bottom: 0.5em;
-		font-size: 28px;
-	}
-}
+	&__show {
+		position: relative;
+		flex: 0 0 calc(75% - 15px);
 
-@media only screen and (max-width: 767px) {
-	.archive {
-		&__posts {
-			width: 100%;
+		h1.title {
+			font-weight: 700;
+			font-size: 28px;
+			line-height: 130%;
+			color: #0E1618;
+			text-transform: uppercase;
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 0 14px;
 
-			.entry-thumbnail,
-			.entry-content {
-				width: 100%
+			&::before {
+				content: '';
+				display: block;
+				width: 6px;
+				//height: 40px;
+				background: #61795D;
+				margin-right: 10px;
 			}
 		}
 
-		&__sidebar {
-			width: 100%;
+		p.description {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 22px;
+			color: #161616;
+			margin: 0 0 16px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 30px;
+		margin-bottom: 40px;
+
+		.entry-content {
+			position: relative;
+			flex: 0 0 calc(70% - 15px);
+
+			h2 {
+				font-weight: 700;
+				font-size: 18px;
+				color: #00141E;
+				line-height: 130%;
+				margin: 0 0 8px;
+
+				a {
+					color: #00141E;
+					text-decoration: none;
+
+					&:hover {
+						color: #61795D;
+					}
+				}
+			}
+		}
+
+		.entry-excerpt {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			color: #555E61;
+			@include set-line(3);
+		}
+
+		.entry-thumbnail {
+			flex: 0 0 calc(30% - 15px);
+			overflow: hidden;
+			@include set_thumbnail(60%);
 		}
 	}
 }

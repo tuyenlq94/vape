@@ -1,50 +1,22 @@
-.widget_categories,
-.widget_tag_cloud,
-.widget_iwin-recent-posts,
-.widget {
+.archive-post__sidebar .widget {
 	position: relative;
-	background-color: #320050;
-	border-radius: 5px;
-	margin-bottom: 20px;
+	border: 1px solid #E9E9E9;
+	border-radius: 8px;
+	padding: 8px 16px 16px;
 
 	.widget-title {
 		width: 100%;
 		display: flex;
-		background-color: #2894ca;
 		color: #fff;
 		text-transform: uppercase;
-		font-weight: 500;
-		font-size: 14px;
-		margin-bottom: auto;
-		display: block;
-		margin: 0 0 10px 0;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 22px;
+		color: #161616;
+		padding-bottom: 10px;
+		margin: 15px 0 10px 0;
+		border-bottom: 2px solid #367E62;
 
-		span {
-			background: #e9952c;
-			padding: 10px 20px 8px 20px;
-			color: white;
-			position: relative;
-			display: inline-block;
-			margin: 0;
-			margin: 0;
-			font-size: 16px;
-			line-height: 22px;
-			display: inline-block;
-			text-transform: uppercase;
-
-			&:after {
-				content: "";
-				width: 0;
-				height: 0;
-				border-top: 40px solid transparent;
-				border-left: 20px solid #e9952c;
-				border-bottom: 0px solid transparent;
-				border-right: 0 solid transparent;
-				position: absolute;
-				top: 0px;
-				right: -20px;
-			}
-		}
 	}
 
 	.tagcloud {
@@ -58,7 +30,7 @@
 
 	ul {
 		padding: 0;
-		margin: 0 15px;
+		margin: 0px;
 
 		&.children {
 			display: none;
@@ -70,10 +42,19 @@
 		display: flex;
 		flex-direction: column;
 		position: relative;
+		padding: 9px 0;
+		border-bottom: 1px solid #E2E2E2;
+
+		&:last-child {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
 	}
 
 	a {
-		color: #fef1d0;
+		color: #161616;
+		font-weight: 400;
+		font-size: 14px;
 		display: inline-block;
 		padding: 6px 0;
 		text-decoration: none;

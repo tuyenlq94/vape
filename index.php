@@ -16,42 +16,47 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="archive-post">
+			<div class="container">
+				<div class="thuong-hieu__breadcrumb">
+					<?php
+					echo do_shortcode( '[wpseo_breadcrumb]' );
+					?>
+				</div>
+				<div class="archive-post__wrap">
+					<div class="archive-post__sidebar">
+						<?php dynamic_sidebar( 'sidebar-news' )?>
+					</div>
+					<div class="archive-post__show">
+						<h1 class="title">Tin tức vape</h1>
+						<p class="description">Blog cập nhất những tin tức mới nhất về vape và chia sẻ những kiến thức cơ bản đến nâng cao về vape giúp bạn có những trải nghiệm vaping tốt nhất</p>
+					<?php
+					if ( have_posts() ) :
 
+						/* Start the Loop */
+						while ( have_posts() ) :
+							the_post();
+							get_template_part( 'template-parts/content', get_post_type() );
+						endwhile;
+						the_posts_pagination( [
+							'mid_size'  => 1,
+							'prev_text' => __( '←', 'vape' ),
+							'next_text' => __( '→', 'vape' ),
+						] );
+					else :
+						get_template_part( 'template-parts/content', 'none' );
+					endif;
+					?>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
+		get_template_part('template-parts/home/uu-dai');
+		get_template_part('template-parts/home/gioi_thieu');
 		?>
-
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

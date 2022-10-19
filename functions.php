@@ -11,6 +11,7 @@ function vape_setup() {
 		array(
 			'menu-1' => esc_html__( 'Primary', 'vape' ),
 			'menu-2' => esc_html__( 'Product', 'vape' ),
+			'menu-3' => esc_html__( 'News', 'vape' ),
 		)
 	);
 	add_theme_support(
@@ -58,6 +59,17 @@ function vape_widgets_init() {
 		array(
 			'name'          => esc_html__( 'Sidebar', 'vape' ),
 			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Add widgets here.', 'vape' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar news', 'vape' ),
+			'id'            => 'sidebar-news',
 			'description'   => esc_html__( 'Add widgets here.', 'vape' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',

@@ -209,3 +209,31 @@ function vape_news_post() {
 </div>
 <?php
 }
+function vape_recent_posts() {
+	$terms = get_the_category( get_the_ID() );
+	$ids = array_map( function( $term ) {
+		return $term->term_id;
+	}, $terms );
+
+	$args  = array(
+		'posts_per_page'   	=> 4,
+		'post__not_in'     	=> array( get_the_ID() ),
+		'category__in'		=> $ids,
+	);
+	$query = new WP_Query( $args );
+	if ( ! $query->have_posts() ) {
+		return;
+	}
+	?>
+	<div class="related-posts">
+		<h3 class="related-posts__heading"><?php esc_html_e( 'Bài viết liên quan', 'vape' ) ?></h3>
+		<div class="related-posts__wrap">
+			<?php
+			while ( $query->have_posts() ) : $query->the_post();
+				get_template_part( 'template-parts/content', 'post' );
+			endwhile;
+			wp_reset_postdata(); ?>
+		</div>
+	</div>
+	<?php
+}

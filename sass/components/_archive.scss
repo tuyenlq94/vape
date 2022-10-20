@@ -91,5 +91,32 @@
 			overflow: hidden;
 			@include set_thumbnail(60%);
 		}
+
+		.entry-date {
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 10px;
+
+			ul {
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+			}
+
+			li {
+				list-style: none;
+				padding: 5px 10px;
+				background: #DBE6E2;
+				border-radius: 4px;
+				font-weight: 500;
+				font-size: 12px;
+				text-transform: uppercase;
+				color: #1C4A3E;
+			}
+		}
 	}
 }

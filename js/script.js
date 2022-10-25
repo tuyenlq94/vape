@@ -100,6 +100,17 @@ jQuery( function ( $ ) {
 		} );
 
 	};
+	function popupLogout() {
+		$( '.popup-modal' ).magnificPopup( {
+			type: 'inline',
+			preloader: false,
+			modal: true
+		} );
+		$( document ).on( 'click', '.popup-modal-dismiss', function ( e ) {
+			e.preventDefault();
+			$.magnificPopup.close();
+		} );
+	}
 	function tab() {
 		$( 'ul.tabs li' ).click( function () {
 			var tab_id = $( this ).attr( 'data-tab' );
@@ -123,4 +134,5 @@ jQuery( function ( $ ) {
 	slickSlide();
 	toggleSearch();
 	tab();
+	popupLogout();
 } );

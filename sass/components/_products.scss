@@ -1,0 +1,29 @@
+.products-woo {
+	position: relative;
+
+	&__wrap {
+		position: relative;
+		margin-top: 24px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__sidebar {
+		position: relative;
+		flex: 0 0 20%;
+	}
+
+	&__lists {
+		position: relative;
+		flex: 0 0 80%;
+		padding: 0 15px;
+	}
+
+	&__shows {
+		display: grid;
+		gap: 24px;
+		grid-template-columns: repeat(4, 1fr);
+		position: relative;
+		padding-bottom: 50px;
+	}
+}

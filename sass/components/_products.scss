@@ -20,10 +20,144 @@
 	}
 
 	&__shows {
-		display: grid;
-		gap: 24px;
-		grid-template-columns: repeat(4, 1fr);
 		position: relative;
 		padding-bottom: 50px;
+
+		&.grid-view {
+			display: grid;
+			gap: 24px;
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		&.list-view {
+			.products-item {
+				position: relative;
+				display: flex;
+				flex-wrap: wrap;
+				margin-bottom: 26px;
+
+				a.add_cart {
+					bottom: 0;
+					right: 0;
+					left: auto;
+					border-top-left-radius: 27px;
+				}
+			}
+
+			.entry-content {
+				width: calc(100% - 150px);
+
+				h4 {
+					font-weight: 500;
+					font-size: 18px;
+				}
+			}
+
+			.entry-thumbnail {
+				width: 150px
+			}
+		}
+	}
+
+	&__title {
+		position: relative;
+
+		h1.title {
+			font-weight: 700;
+			font-size: 28px;
+			line-height: 130%;
+			text-transform: uppercase;
+			color: #0E1618;
+			margin: 0 0 24px;
+			display: flex;
+			flex-wrap: wrap;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 6px;
+				background: #61795D;
+				margin-right: 10px;
+			}
+		}
+
+		p.description {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 22px;
+			color: #161616;
+		}
+	}
+
+	&__search {
+		position: relative;
+		margin-top: 24px;
+		margin-bottom: 25px;
+
+		form {
+			position: relative;
+		}
+
+		input {
+			padding: 16px 24px;
+			background: #DBE6E2;
+			border: 1px solid #DBE6E2;
+			border-radius: 8px;
+			color: #555E61;
+			font-weight: 400;
+			font-size: 16px;
+		}
+
+		button {
+			width: 22px;
+			height: 22px;
+			background: url('images/icon_search.png') no-repeat;
+			position: absolute;
+			top: 30%;
+			right: 20px;
+			text-indent: -9999px;
+		}
+	}
+
+	&__fillter {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.vape-view-switcher {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 16px;
+
+		.lift {
+			background: #F2F2F2;
+			width: 36px;
+			height: 36px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			border-radius: 100%;
+
+			&:hover,
+			&.current {
+				background-color: #61795D;
+
+				svg {
+					fill: #fff;
+				}
+			}
+		}
+
+		svg {
+			width: 18px;
+			height: 18px;
+			fill: #0E1618
+		}
 	}
 }

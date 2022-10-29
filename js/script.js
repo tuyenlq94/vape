@@ -99,6 +99,22 @@ jQuery( function ( $ ) {
 			]
 		} );
 
+		$( '.slider-for' ).slick( {
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.slider-nav'
+		} );
+		$( '.slider-nav' ).slick( {
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			asNavFor: '.slider-for',
+			dots: false,
+			arrows: true,
+			focusOnSelect: true
+		} );
+
 	};
 	function popupLogout() {
 		$( '.popup-modal' ).magnificPopup( {
@@ -130,9 +146,29 @@ jQuery( function ( $ ) {
 			jQuery( '#masthead' ).removeClass( 'mnfixed' );
 		}
 	} );
+	function vape_view_switcher() {
+		if ( !$( '.vape-view-switcher' ).length ) {
+			return;
+		}
+
+		$( '.vape-view-switcher div' ).click( function () {
+			var view = $( this ).attr( 'id' );
+			$( '.vape-view-switcher div' ).removeClass( 'current' );
+			$( this ).addClass( 'current' );
+			switch_view( view );
+		} );
+		function switch_view( to ) {
+			var from = ( to == 'list' ) ? 'grid' : 'list';
+			var $listings = $( '.products-woo__shows' );
+			$listings.removeClass( from + '-view' ).addClass( to + '-view' );
+		}
+
+
+	}
 	toggleMenu();
 	slickSlide();
 	toggleSearch();
 	tab();
 	popupLogout();
+	vape_view_switcher();
 } );

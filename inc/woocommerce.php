@@ -225,3 +225,16 @@ if ( ! function_exists( 'vape_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 10 );
+add_action( 'woocommerce_before_shop_loop', 'vape_view_witcher', 40 );
+function vape_view_witcher() {
+?>
+<div class="vape-view-switcher d-inline-block align-middle">
+	<div id="grid" class=" btn btn-secondary-soft lift current"><?php Vape_Icons::render('view-grid')?></div>
+	<div id="list" class=" btn btn-secondary-soft lift"><?php Vape_Icons::render('view-list')?></div>
+</div>
+<?php
+}
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+add_action( 'woocommerce_sidebar_products', 'woocommerce_output_related_products', 10 );

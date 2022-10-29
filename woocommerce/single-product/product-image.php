@@ -37,7 +37,7 @@ $wrapper_classes   = apply_filters(
 );
 ?>
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
-	<figure class="woocommerce-product-gallery__wrapper">
+	<div class="single-product__galler slider-for">
 		<?php
 		if ( $post_thumbnail_id ) {
 			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
@@ -51,5 +51,8 @@ $wrapper_classes   = apply_filters(
 
 		do_action( 'woocommerce_product_thumbnails' );
 		?>
-	</figure>
+	</div>
+	<div class="single-product__thumbnail slider-nav">
+		<?php do_action( 'woocommerce_product_thumbnails' ); ?>
+	</div>
 </div>

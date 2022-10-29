@@ -19,6 +19,10 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 global $post, $product;
+$args  = array(
+    'taxonomy' => 'product_cat'
+);
+$terms = wp_get_post_terms($post->ID, 'product_cat', $args);
 ?>
 <div class="products-woo">
 	<div class="container">
@@ -29,9 +33,16 @@ global $post, $product;
 			<div class="products-woo__sidebar"></div>
 			<div class="products-woo__lists">
 				<div class="products-woo__title">
-					<h1 class="title"><?= $product->get_categories();?></h1>
+					<h1 class="title"><?= $terms[0]->name?></h1>
+					<p class="description"><?= $terms[0]->description?></p>
 				</div>
-				<div class="products-woo__shows">
+				<div class="products-woo__search">
+					<?php wc_get_template( 'product-searchform.php' );?>
+				</div>
+				<div class="products-woo__fillter">
+					<?php do_action( 'woocommerce_before_shop_loop' );?>
+				</div>
+				<div class="products-woo__shows grid-view">
 					<?php
 					if ( wc_get_loop_prop( 'total' ) ) {
 						while ( have_posts() ) {

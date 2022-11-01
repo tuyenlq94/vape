@@ -11,6 +11,48 @@
 	&__sidebar {
 		position: relative;
 		flex: 0 0 20%;
+		border: 1px solid #E9E9E9;
+		border-radius: 8px;
+		padding: 8px 8px 16px;
+
+		h3.widget-title {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 22px;
+			color: #161616;
+			text-transform: uppercase;
+			margin: 0 0 15px;
+		}
+
+		ul.menu {
+			padding: 0;
+			margin: 0;
+
+			li {
+				list-style: none;
+			}
+
+			a {
+				padding: 5px 10px;
+				border-radius: 8px;
+				background: #DBE6E2;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 22px;
+				color: #1C4A3E;
+				text-decoration: none;
+				width: 100%;
+				display: block;
+			}
+		}
+
+		ul.sub-menu {
+			padding-left: 10px;
+
+			li a {
+				background: transparent;
+			}
+		}
 	}
 
 	&__lists {
@@ -158,6 +200,17 @@
 			width: 18px;
 			height: 18px;
 			fill: #0E1618
+		}
+	}
+}
+
+.devvn_woocommerce_price_filter {
+	ul {
+		padding: 0;
+		margin: 0;
+
+		li {
+			list-style: none;
 		}
 	}
 }

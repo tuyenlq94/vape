@@ -30,7 +30,7 @@ $terms = wp_get_post_terms($post->ID, 'product_cat', $args);
 			<?= do_shortcode( '[wpseo_breadcrumb]' ); ?>
 		</div>
 		<div class="products-woo__wrap">
-			<div class="products-woo__sidebar"></div>
+			<div class="products-woo__sidebar"><?php dynamic_sidebar( 'sidebar-1' )?></div>
 			<div class="products-woo__lists">
 				<div class="products-woo__title">
 					<h1 class="title"><?= $terms[0]->name?></h1>

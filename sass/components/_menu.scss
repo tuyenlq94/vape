@@ -13,17 +13,26 @@
 
 	li {
 		border-top: 1px solid var(--color-light);
+		padding: 14px 0;
+
+		&.current-menu-item,
+		&:hover {
+			a {
+				background: #1C4A3E;
+				border-radius: 16px 2px 2px 2px;
+			}
+		}
 	}
 
 	a {
 		display: inline-block;
 		font-weight: 500;
 		text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
-		padding: 19px 12px 19px;
+		padding: 6px 1 0px 6px 10px;
 		display: block;
 		position: relative;
 		text-transform: uppercase;
-		margin-right: 20px;
+		text-decoration: none;
 	}
 
 	.menu {

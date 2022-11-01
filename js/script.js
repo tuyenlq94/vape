@@ -23,6 +23,9 @@ jQuery( function ( $ ) {
 		$( '.btn-user' ).click( function () {
 			$( '.account__wrapper' ).toggle( 'open-search' );
 		} );
+		$( '.btn-cart' ).click( function () {
+			$( '.gio_hang' ).toggle( 'open-cart' );
+		} );
 	}
 
 

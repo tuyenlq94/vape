@@ -198,3 +198,22 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 991px) {
+	.header {
+
+		&-phone {
+			display: none;
+		}
+
+		.header-time {
+			display: none;
+		}
+
+		&__wrap {
+			.logo {
+				width: calc(100% - 130px - 15px);
+			}
+		}
+	}
+}

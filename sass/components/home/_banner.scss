@@ -1,6 +1,14 @@
 .banner {
 	position: relative;
 
+	.banner_pc {
+		display: block;
+	}
+
+	.banner_mb {
+		display: none;
+	}
+
 	&__inner {
 		position: relative;
 	}
@@ -79,6 +87,24 @@
 					border: 1px solid rgba(218, 176, 41, 1);
 					background: transparent;
 				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.banner {
+		.banner_mb {
+			display: block;
+		}
+
+		.banner_pc {
+			display: none;
+		}
+
+		&__content {
+			h2 {
+				font-size: 30px;
 			}
 		}
 	}

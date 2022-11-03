@@ -214,3 +214,36 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 767px) {
+	.products-woo {
+		&__sidebar {
+			flex: 0 0 100%;
+		}
+
+		&__lists {
+			flex: 0 0 100%;
+			margin-top: 30px;
+		}
+
+		&__shows {
+			&.grid-view {
+				grid-template-columns: repeat(2, 1fr);
+				margin-top: 30px;
+			}
+
+			&.list-view {
+				.entry-content {
+					padding: 15px 5px;
+				}
+			}
+		}
+	}
+
+	.products-item {
+		.price-product {
+			gap: 6px;
+			margin-bottom: 0
+		}
+	}
+}

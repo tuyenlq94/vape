@@ -180,3 +180,23 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 991px) {
+	.news {
+		&__wrap {
+			grid-template-columns: repeat(2, 1fr);
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 776px) {
+	.news {
+		&__wrap {
+			grid-template-columns: repeat(1, 1fr);
+			margin: 0;
+			padding: 0;
+		}
+	}
+}

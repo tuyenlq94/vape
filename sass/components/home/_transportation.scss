@@ -233,3 +233,41 @@
 	padding: 50px 0 0;
 	position: relative;
 }
+
+@media only screen and (max-width: 991px) {
+	.transportation {
+		&__item {
+			width: calc(50% - 30px);
+		}
+	}
+
+	.best-selling,
+	.featured {
+		&__top {
+			h2 {
+				font-size: 26px;
+			}
+		}
+
+		&__wrap {
+
+			.slick-next {
+				top: 50%;
+				right: 10px;
+			}
+
+			.slick-prev {
+				top: 50%;
+				left: 10px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.transportation {
+		&__item {
+			width: 100%;
+		}
+	}
+}

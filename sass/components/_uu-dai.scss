@@ -59,3 +59,11 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 991px) {
+	.uu-dai {
+		&__wrap {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}

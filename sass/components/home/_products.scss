@@ -52,3 +52,31 @@
 		gap: 28px;
 	}
 }
+
+@media only screen and (max-width: 991px) {
+	.product-home {
+		&__top {
+			ul#product-menu {
+				gap: 10px;
+			}
+		}
+
+		&__wrap {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.product-home {
+		&__top {
+			ul#product-menu {
+				gap: 10px;
+			}
+		}
+
+		&__wrap {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}

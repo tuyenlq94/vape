@@ -94,3 +94,19 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 991px) {
+	.related-posts {
+		&__wrap {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.related-posts {
+		&__wrap {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}

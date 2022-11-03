@@ -120,3 +120,15 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 767px) {
+	.archive-post {
+		&__sidebar {
+			flex: 0 0 100%;
+		}
+
+		&__show {
+			flex: 0 0 100%;
+		}
+	}
+}

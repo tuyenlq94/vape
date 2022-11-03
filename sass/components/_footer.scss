@@ -89,3 +89,29 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 991px) {
+	.site-footer {
+		.footer_about {
+			flex: 0 0 50%;
+			padding-right: 20px;
+		}
+
+		.footer_menu {
+			flex: 0 0 50%
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.site-footer {
+		.footer_about {
+			flex: 0 0 100%;
+			padding-right: 0px;
+		}
+
+		.footer_menu {
+			flex: 0 0 100%
+		}
+	}
+}

@@ -4,7 +4,7 @@
     "postcss": "postcss style.css --no-map --use autoprefixer -o style.css --autoprefixer.browsers=\"last 2 versions\"",
     "editor": "node-sass sass/style-editor.scss style-editor.css",
     "watch": "node-sass --output-style compressed -w sass -r -o .",
-    "sync": "browser-sync start --proxy \"localhost/vape\" --files \"style.css\""
+    "sync": "browser-sync start --proxy \"localhost:8080/vape\" --files \"style.css\""
   },
   "dependencies": {
     "node-sass": "^4.14.1"

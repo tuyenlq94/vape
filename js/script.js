@@ -56,11 +56,9 @@ jQuery( function ( $ ) {
 			autoplaySpeed: 5000,
 			responsive: [
 				{
-					breakpoint: 600,
-					settings: {
-						slidesToShow: 1,
-					}
-				},
+					breakpoint: 767,
+					settings: "unslick"
+				}
 			]
 		} );
 		$( '.product-portfolio__inner' ).slick( {
@@ -76,8 +74,10 @@ jQuery( function ( $ ) {
 					breakpoint: 600,
 					autoplay: true,
 					autoplaySpeed: 5000,
+					rows: 0,
 					settings: {
 						slidesToShow: 1,
+						slidesToScroll: 1,
 					}
 				},
 			]
@@ -130,6 +130,15 @@ jQuery( function ( $ ) {
 			$.magnificPopup.close();
 		} );
 	}
+	function showBox() {
+		if ( document.getElementById( 'about-home__content' ).offsetHeight < document.getElementById( 'about-home__content' ).scrollHeight ) {
+			document.getElementById( 'showBtn' ).style.display = 'inline';
+		}
+		$( '#showBtn' ).on( 'click', function () {
+			document.getElementById( 'about-home__content' ).style.maxHeight = 'inherit';
+			document.getElementById( 'showBtn' ).style.display = 'none';
+		} );
+	}
 	function tab() {
 		$( 'ul.tabs li' ).click( function () {
 			var tab_id = $( this ).attr( 'data-tab' );
@@ -174,4 +183,5 @@ jQuery( function ( $ ) {
 	tab();
 	popupLogout();
 	vape_view_switcher();
+	showBox();
 } );

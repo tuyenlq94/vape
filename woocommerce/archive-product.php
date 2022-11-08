@@ -20,9 +20,9 @@ defined( 'ABSPATH' ) || exit;
 get_header( 'shop' );
 global $post, $product;
 $args  = array(
-    'taxonomy' => 'product_cat'
+	'taxonomy' => 'product_cat',
 );
-$terms = wp_get_post_terms($post->ID, 'product_cat', $args);
+$terms = wp_get_post_terms( $post->ID, 'product_cat', $args );
 ?>
 <div class="products-woo">
 	<div class="container">
@@ -30,17 +30,17 @@ $terms = wp_get_post_terms($post->ID, 'product_cat', $args);
 			<?= do_shortcode( '[wpseo_breadcrumb]' ); ?>
 		</div>
 		<div class="products-woo__wrap">
-			<div class="products-woo__sidebar"><?php dynamic_sidebar( 'sidebar-1' )?></div>
+			<div class="products-woo__sidebar"><?php dynamic_sidebar( 'sidebar-1' ) ?></div>
 			<div class="products-woo__lists">
 				<div class="products-woo__title">
 					<h1 class="title"><?= $terms[0]->name?></h1>
 					<p class="description"><?= $terms[0]->description?></p>
 				</div>
 				<div class="products-woo__search">
-					<?php wc_get_template( 'product-searchform.php' );?>
+					<?php wc_get_template( 'product-searchform.php' ); ?>
 				</div>
 				<div class="products-woo__fillter">
-					<?php do_action( 'woocommerce_before_shop_loop' );?>
+					<?php do_action( 'woocommerce_before_shop_loop' ); ?>
 				</div>
 				<div class="products-woo__shows grid-view">
 					<?php
@@ -48,7 +48,7 @@ $terms = wp_get_post_terms($post->ID, 'product_cat', $args);
 						while ( have_posts() ) {
 							the_post();
 							do_action( 'woocommerce_shop_loop' );
-				
+
 							wc_get_template_part( 'content', 'product' );
 						}
 					}
@@ -68,6 +68,7 @@ $terms = wp_get_post_terms($post->ID, 'product_cat', $args);
 	</div>
 </div>
 <?php
-get_template_part('template-parts/home/uu-dai');
-get_template_part('template-parts/home/gioi_thieu');
+get_template_part( 'template-parts/home/uu-dai' );
+get_template_part( 'template-parts/archive/about' );
+get_template_part( 'template-parts/home/gioi_thieu' );
 get_footer( 'shop' );

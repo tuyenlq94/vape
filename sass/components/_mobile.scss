@@ -4,7 +4,22 @@
 	}
 
 	.header-menu {
-		text-align: right;
+		background: transparent;
+		position: absolute;
+		top: 17px;
+		left: 0;
+	}
+
+	.header__wrap .logo {
+		margin-left: 80px;
+	}
+
+	.header-cart {
+
+		.search-open,
+		.btn-user {
+			display: none;
+		}
 	}
 
 	.menu-toggle svg {
@@ -107,5 +122,26 @@
 	.archive_post,
 	.new_Post {
 		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.product-portfolio {
+		&__inner {
+			//padding: 0 30% 0 0;
+
+			.slick-list {
+
+				padding: 0 35% 0 0;
+			}
+		}
+
+		&__content {
+			h3 {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.trademark__item {
+		width: calc(50% - 15px);
 	}
 }

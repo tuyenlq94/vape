@@ -13,7 +13,7 @@ get_header();
 	<main id="primary" class="site-main">
 		<div class="container">
 			<div class="thuong-hieu__breadcrumb">
-				<?= do_shortcode( '[wpseo_breadcrumb]' ); ?>
+				<?= do_shortcode( '[rank_math_breadcrumb]' ); ?>
 			</div>
 			<div class="single-content">
 				<?php

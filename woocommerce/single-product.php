@@ -24,7 +24,7 @@ get_header( 'shop' ); ?>
 <section class="single-product">
 	<div class="container">
 		<div class="thuong-hieu__breadcrumb">
-			<?= do_shortcode( '[wpseo_breadcrumb]' ); ?>
+			<?= do_shortcode( '[rank_math_breadcrumb]' ); ?>
 		</div>
 		<div class="single-product__wrap">
 			<?php while ( have_posts() ) : ?>
@@ -36,9 +36,9 @@ get_header( 'shop' ); ?>
 		</div>
 		<div class="single-product__inner">
 			<?php
-			get_template_part('template-parts/single/feadtured-products');
-			get_template_part('template-parts/home/uu-dai');
-			get_template_part('template-parts/home/gioi_thieu');
+			get_template_part( 'template-parts/single/feadtured-products' );
+			get_template_part( 'template-parts/home/uu-dai' );
+			get_template_part( 'template-parts/home/gioi_thieu' );
 			?>
 		</div>
 	</div>

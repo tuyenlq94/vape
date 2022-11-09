@@ -27,7 +27,7 @@ $terms = wp_get_post_terms( $post->ID, 'product_cat', $args );
 <div class="products-woo">
 	<div class="container">
 		<div class="thuong-hieu__breadcrumb">
-			<?= do_shortcode( '[wpseo_breadcrumb]' ); ?>
+			<?= do_shortcode( '[rank_math_breadcrumb]' ); ?>
 		</div>
 		<div class="products-woo__wrap">
 			<div class="products-woo__sidebar"><?php dynamic_sidebar( 'sidebar-1' ) ?></div>

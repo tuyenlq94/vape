@@ -7,12 +7,12 @@ get_header();
 			<div class="container">
 				<div class="thuong-hieu__breadcrumb">
 					<?php
-					echo do_shortcode( '[wpseo_breadcrumb]' );
+					echo do_shortcode( '[rank_math_breadcrumb]' );
 					?>
 				</div>
 				<div class="archive-post__wrap">
 					<div class="archive-post__sidebar">
-						<?php dynamic_sidebar( 'sidebar-news' )?>
+						<?php dynamic_sidebar( 'sidebar-news' ) ?>
 					</div>
 					<div class="archive-post__show">
 						<h1 class="title">Tin tức vape</h1>
@@ -38,10 +38,10 @@ get_header();
 				</div>
 			</div>
 		</div>
-		
+
 		<?php
-		get_template_part('template-parts/home/uu-dai');
-		get_template_part('template-parts/home/gioi_thieu');
+		get_template_part( 'template-parts/home/uu-dai' );
+		get_template_part( 'template-parts/home/gioi_thieu' );
 		?>
 	</main><!-- #main -->
 

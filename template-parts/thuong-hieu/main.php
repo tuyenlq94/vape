@@ -8,7 +8,7 @@ $vapes = rwmb_meta('group_vape');
 	<div class="container">
 		<div class="thuong-hieu__breadcrumb">
 			<?php
-			echo do_shortcode( '[wpseo_breadcrumb]' );
+			echo do_shortcode( '[rank_math_breadcrumb]' );
 			?>
 		</div>
 		<div class="thuong-hieu__vape">

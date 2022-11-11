@@ -18,6 +18,65 @@
 		margin: auto;
 		display: table;
 	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		border-bottom: 1px solid #EEEEEE;
+		padding-bottom: 15px;
+		margin-bottom: 24px;
+
+		.entry-thumbnail {
+			width: 250px;
+			@include set-thumbnail(60%);
+		}
+
+		.entry-content {
+			width: calc(100% - 250px);
+			padding-right: 24px;
+
+			h2 {
+				font-size: 18px;
+				color: #000;
+				margin: 0 0 10px;
+			}
+		}
+
+		.entry-excerpt {
+			@include set-line(3);
+			font-size: 16px;
+		}
+
+		.entry-date {
+			position: relative;
+			display: flex;
+
+			p.date {
+				margin: 0;
+			}
+
+			ul {
+				padding: 0;
+				margin: 0 0px 0 0;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			li {
+				list-style: none;
+				margin-right: 10px;
+				background-color: #DBE6E2;
+				border-radius: 4px;
+				padding: 5px 10px;
+			}
+
+			a {
+				text-decoration: none;
+			}
+		}
+	}
 }
 
 .comments-area {

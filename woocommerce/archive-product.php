@@ -69,6 +69,17 @@ $terms = wp_get_post_terms( $post->ID, 'product_cat', $args );
 </div>
 <?php
 get_template_part( 'template-parts/home/uu-dai' );
-get_template_part( 'template-parts/archive/about' );
+$about = rwmb_meta( 'description_product', [ 'object_type' => 'term' ], $terms[0]->term_id );
+?>
+<section class="about-home">
+	<div class="container">
+		<div id="about-home__content">
+			<?= wp_kses_post( wpautop( $about ) );?>
+		</div>
+		<button id="showBtn" class="xem_them">Xem thêm</button>
+	</div>
+</section>
+<?php
+// get_template_part( 'template-parts/archive/about' );
 get_template_part( 'template-parts/home/gioi_thieu' );
 get_footer( 'shop' );

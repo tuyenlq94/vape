@@ -1,6 +1,8 @@
 jQuery( function ( $ ) {
 
 	var clickEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+	let $window = $( window ),
+		$body = $( 'body' );
 
 	function toggleMenu() {
 		const nav = document.querySelector( '#site-navigation' );
@@ -131,13 +133,16 @@ jQuery( function ( $ ) {
 		} );
 	}
 	function showBox() {
-		if ( document.getElementById( 'about-home__content' ).offsetHeight < document.getElementById( 'about-home__content' ).scrollHeight ) {
-			document.getElementById( 'showBtn' ).style.display = 'inline';
+		if ( $body.hasClass( 'page-template-home-page' ) || $body.hasClass( 'page-template-thuong-hieu' ) || $body.hasClass( 'tax-product_cat' ) ) {
+
+			if ( document.getElementById( 'about-home__content' ).offsetHeight < document.getElementById( 'about-home__content' ).scrollHeight ) {
+				document.getElementById( 'showBtn' ).style.display = 'inline';
+			}
+			$( '#showBtn' ).on( 'click', function () {
+				document.getElementById( 'about-home__content' ).style.maxHeight = 'inherit';
+				document.getElementById( 'showBtn' ).style.display = 'none';
+			} );
 		}
-		$( '#showBtn' ).on( 'click', function () {
-			document.getElementById( 'about-home__content' ).style.maxHeight = 'inherit';
-			document.getElementById( 'showBtn' ).style.display = 'none';
-		} );
 	}
 	function tab() {
 		$( 'ul.tabs li' ).click( function () {

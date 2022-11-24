@@ -59,10 +59,16 @@
 		a {
 			display: inline-block;
 			font-size: 14px;
+			font-weight: 600;
 			line-height: 24px;
 			letter-spacing: inherit;
 			padding: 5px 0;
 			color: #252525;
+			background-color: transparent !important;
+
+			&:hover {
+				color: #367e62;
+			}
 		}
 	}
 }
@@ -190,7 +196,7 @@
 			left: 0;
 			top: 100%;
 			z-index: 999;
-			background: #0c86bf;
+			background: #fff;
 			width: 250px;
 			box-shadow: var(--shadow-md);
 			text-indent: 0;

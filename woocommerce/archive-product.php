@@ -30,11 +30,11 @@ $terms = wp_get_post_terms( $post->ID, 'product_cat', $args );
 			<?= do_shortcode( '[rank_math_breadcrumb]' ); ?>
 		</div>
 		<div class="products-woo__wrap">
-			<div class="products-woo__sidebar"><?php dynamic_sidebar( 'sidebar-1' ) ?></div>
+
 			<div class="products-woo__lists">
 				<div class="products-woo__title">
-					<h1 class="title"><?= $terms[0]->name?></h1>
-					<p class="description"><?= $terms[0]->description?></p>
+					<h1 class="title"><?php the_archive_title(); ?></h1>
+					<p class="description"><?php the_archive_description(); ?></p>
 				</div>
 				<div class="products-woo__search">
 					<?php wc_get_template( 'product-searchform.php' ); ?>
@@ -64,6 +64,7 @@ $terms = wp_get_post_terms( $post->ID, 'product_cat', $args );
 					?>
 				</div>
 			</div>
+			<div class="products-woo__sidebar"><?php dynamic_sidebar( 'sidebar-1' ) ?></div>
 		</div>
 	</div>
 </div>

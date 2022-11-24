@@ -228,3 +228,24 @@
 		transform: rotate(-90deg);
 	}
 }
+
+@media only screen and(max-width: 767px) {
+	.nav {
+		li {
+			padding: 8px 0px;
+		}
+
+		.sub-menu {
+			display: block;
+
+			li {
+				border: 0;
+			}
+
+			a {
+				color: #fff;
+				font-weight: 400;
+			}
+		}
+	}
+}

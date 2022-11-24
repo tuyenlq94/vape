@@ -1,5 +1,10 @@
 .banner {
 	position: relative;
+	margin-bottom: 0;
+
+	&.slick-dotted.slick-slider {
+		margin-bottom: 0;
+	}
 
 	.banner_pc {
 		display: block;

@@ -1,7 +1,7 @@
 .product-portfolio {
 	position: relative;
 	background-color: #DBE6E2;
-	padding: 16px 0;
+	padding: 50px 0 30px;
 
 	ul.tabs {
 		padding: 0;
@@ -70,7 +70,7 @@
 		}
 	}
 
-	&__item {
+	&__item a {
 		position: relative;
 		background-color: #fff;
 		display: flex !important;
@@ -79,6 +79,13 @@
 		padding: 20px;
 		margin-bottom: 16px;
 		gap: 24px;
+		text-decoration: none;
+
+		&:hover {
+			h3 {
+				color: #367e62;
+			}
+		}
 	}
 
 	&__image {

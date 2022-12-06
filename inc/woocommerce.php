@@ -228,13 +228,56 @@ if ( ! function_exists( 'vape_woocommerce_header_cart' ) ) {
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 10 );
 add_action( 'woocommerce_before_shop_loop', 'vape_view_witcher', 40 );
 function vape_view_witcher() {
-?>
+	?>
 <div class="vape-view-switcher d-inline-block align-middle">
-	<div id="grid" class=" btn btn-secondary-soft lift current"><?php Vape_Icons::render('view-grid')?></div>
-	<div id="list" class=" btn btn-secondary-soft lift"><?php Vape_Icons::render('view-list')?></div>
+	<div id="grid" class=" btn btn-secondary-soft lift current"><?php Vape_Icons::render( 'view-grid' ) ?></div>
+	<div id="list" class=" btn btn-secondary-soft lift"><?php Vape_Icons::render( 'view-list' ) ?></div>
 </div>
-<?php
+	<?php
 }
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 add_action( 'woocommerce_sidebar_products', 'woocommerce_output_related_products', 10 );
+
+function cw_woo_attribute() {
+	global $product;
+	$attributes = $product->get_attributes();
+	if ( ! $attributes ) {
+		return;
+	}
+	$display_result = '';
+	foreach ( $attributes as $attribute ) {
+		if ( $attribute->get_variation() ) {
+			continue;
+		}
+		$name = $attribute->get_name();
+		if ( $attribute->is_taxonomy() ) {
+			$terms              = wp_get_post_terms( $product->get_id(), $name, 'all' );
+			$cwtax              = $terms[0]->taxonomy;
+			$cw_object_taxonomy = get_taxonomy( $cwtax );
+			if ( isset( $cw_object_taxonomy->labels->singular_name ) ) {
+				$tax_label = $cw_object_taxonomy->labels->singular_name;
+			} elseif ( isset( $cw_object_taxonomy->label ) ) {
+				$tax_label = $cw_object_taxonomy->label;
+				if ( 0 === strpos( $tax_label, 'Product ' ) ) {
+					$tax_label = substr( $tax_label, 8 );
+				}
+			}
+			$display_result .= $tax_label . ': ';
+			$tax_terms       = array();
+			foreach ( $terms as $term ) {
+				$single_term = esc_html( $term->name );
+				array_push( $tax_terms, $single_term );
+			}
+			$display_result .= implode( ', ', $tax_terms ) . '<br />';
+		} else {
+			$display_result .= $name . ': ';
+			$display_result .= esc_html( implode( ', ', $attribute->get_options() ) ) . '<br />';
+		}
+	}
+	echo '<div class="woo-attributes">';
+	echo $display_result;
+	echo '</div>';
+}
+
+add_action( 'woocommerce_single_product_summary', 'cw_woo_attribute', 25 );
